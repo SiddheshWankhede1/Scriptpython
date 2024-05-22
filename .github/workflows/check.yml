@@ -1,4 +1,4 @@
-name: Execute Delete Quer
+name: Execute Delete Query
 
 on:
   push:
