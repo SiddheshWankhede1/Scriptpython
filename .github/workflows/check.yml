@@ -22,7 +22,7 @@ jobs:
       run: pip install psycopg2-binary  # install psycopg2
 
     - name: Run Python script
-      run: python delete_script.py
+      run: python script.py
       env:
         DATABASE_HOST: localhost
         DATABASE_PORT: 5432  
