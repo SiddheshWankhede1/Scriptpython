@@ -23,6 +23,10 @@ jobs:
           pip install psycopg2-binary
 
       - name: Execute script.py
-        run: |
-          python script.py
+        env:
+          POSTGRES_HOST: localhost
+          POSTGRES_DB: credentials
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: test1234
+        run: python script.py
           
