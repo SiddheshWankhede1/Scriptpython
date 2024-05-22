@@ -8,6 +8,12 @@ on:
 jobs:
   delete_query:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:latest
+        ports:
+          - 5432:5432
+    
 
     steps:
     - name: Checkout repository
