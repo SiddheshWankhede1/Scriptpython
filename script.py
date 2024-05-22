@@ -24,7 +24,7 @@ def run_delete_query():
         # Execute the delete query
         cursor = conn.cursor()
         cursor.execute(f"""
-                DELETE FROM public.credentials_data
+                DELETE FROM public.client_id
         """)
         conn.commit()
         print("Delete query executed successfully!")
