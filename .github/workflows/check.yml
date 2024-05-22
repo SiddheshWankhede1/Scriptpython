@@ -1,0 +1,33 @@
+name: Run Delete Query
+
+on:
+  push:
+    branches:
+      - main  # adjust this to your main branch name
+
+jobs:
+  delete_query:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8  # choose the appropriate Python version
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt  # if you have any Python dependencies
+        pip install psycopg2-binary  # install psycopg2
+
+    - name: Run Python script
+      run: python delete_script.py
+      env:
+        DATABASE_HOST: localhost
+        DATABASE_PORT: 5432  
+        DATABASE_NAME: credentials  
+        DATABASE_USER: postgres
+        DATABASE_PASSWORD: Jtrip23@
