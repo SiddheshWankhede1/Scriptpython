@@ -9,6 +9,8 @@ def run_delete_query():
     db_user = os.environ.get('DATABASE_USER','postgres')
     db_password = os.environ.get('DATABASE_PASSWORD','Jtrip23@')
 
+    conn=None
+
     try:
         # Connect to the database
         conn = psycopg2.connect(
