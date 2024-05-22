@@ -33,7 +33,7 @@ jobs:
       id: connect
       run: |
           for i in {1..5}; do
-            psql -h 127.0.0.1 -U your_username -d your_database -c 'SELECT 1;' && break || sleep 5;
+            psql -h 127.0.0.1 -U postgres -d credentials -c 'SELECT 1;' && break || sleep 5;
           done
 
     - name: Check connection status
