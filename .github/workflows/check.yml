@@ -27,6 +27,6 @@ jobs:
           POSTGRES_HOST: localhost
           POSTGRES_DB: credentials
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: test1234
+          POSTGRES_PASSWORD: Jtrip23@
         run: python script.py
           
