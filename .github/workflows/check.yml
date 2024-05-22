@@ -1,4 +1,4 @@
-name: Execute Delete Queryy
+name: Execute Delete Query
 
 on:
   push:
