@@ -29,18 +29,5 @@ jobs:
         DATABASE_NAME: credentials  
         DATABASE_USER: postgres
         DATABASE_PASSWORD: Jtrip23@
-    - name: Retry connecting to PostgreSQL
-      id: connect
-      run: |
-          for i in {1..5}; do
-            psql -h 127.0.0.1 -U postgres -d credentials -c 'SELECT 1;' && break || sleep 5;
-          done
 
-    - name: Check connection status
-      run: |
-          if [ ${{ steps.connect.exitcode }} -eq 0 ]; then
-            echo "Connection successful."
-          else
-            echo "Error: Connection failed after multiple attempts."
-            exit 1
-          fi
+   
