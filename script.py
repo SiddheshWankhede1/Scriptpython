@@ -3,7 +3,7 @@ import os
 
 def run_delete_query():
     # Get database connection parameters from environment variables
-    db_host = os.environ.get('DATABASE_HOST', 'localhost')
+    db_host = os.environ.get('DATABASE_HOST', '127.0.0.1/32')
     db_port = os.environ.get('DATABASE_PORT', '5432')
     db_name = os.environ.get('DATABASE_NAME','credentials')
     db_user = os.environ.get('DATABASE_USER','postgres')
